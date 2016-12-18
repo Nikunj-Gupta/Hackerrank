@@ -1,0 +1,32 @@
+// Question: 
+
+
+#include <cmath>
+#include <cstdio>
+#include <vector>
+#include <iostream>
+#include <algorithm>
+using namespace std;
+
+
+int main() {
+    /* Enter your code here. Read input from STDIN. Print output to STDOUT */   
+    int T;//Number of Test Cases (T)
+    int l,b,max;
+    int ans;
+    scanf("%d",&T);
+    for(int i=0;i<T;i++)
+    {
+    	scanf("%d %d",&l,&b);
+    	for(int i = 1;i<=(l*b);i++)
+    	{
+    		if((l*b)%(i*i)==0)
+    			max = i;    	
+    	}
+    	ans = (l*b)/(max*max);
+    	printf("%d\n",ans);
+    }
+    
+    return 0;
+}
+
